@@ -1,0 +1,24 @@
+$widht: 100px;
+$height: 100px; 
+
+.imgAuto{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    
+}
+
+//uso operaciones para el tamaño de la imagen
+
+img{
+
+    width: $widht*4;
+    height: $height*4;
+    
+}
+
+//valores para el extend del contenedor
+
+%heightCont {
+    height: 90vh;
+}

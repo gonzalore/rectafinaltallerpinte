@@ -1,0 +1,105 @@
+//trabajo en el HTML de servicios
+//Grid para la página servicios
+
+//versión mobile
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//uso extend para el contenedor
+
+.contenedorServicio{
+    @extend %heightCont;
+}
+
+.mainServicio{
+    height: 80vh;
+    display: grid;
+    grid-template-areas: "mainS" 
+                         "imagen1" 
+                         "imagen2"
+                         "imagen3" 
+                         "imagen4";
+    justify-content: center;
+    margin: auto;
+}
+
+.imagen4{
+    display:none
+
+}
+
+.mainS{
+    text-align: center;
+    grid-area: mainS;
+    margin: auto;
+}
+
+.imagen1{
+    grid-area: imagen1;
+    margin: 0.3rem;
+
+}
+
+.imagen2{
+    grid-area: imagen2;
+    margin: 0.3rem;
+}
+
+.imagen3{
+    grid-area: imagen3;
+    margin: 0.3rem;
+}
+
+.imagen4{
+    grid-area: imagen4;
+    margin: 0.3rem;
+}
+
+//versión tablet
+
+@media only screen and (min-width:600px){
+
+    .mainServicio{
+        height: 80vh;
+        display: grid;
+        grid-template-areas: "mainS mainS"
+                             "imagen1 imagen2" 
+                             "imagen3 imagen4";                   
+        justify-content: center;
+        margin: auto;
+    }
+
+
+    .imagen4{
+        display: block;
+        grid-area: imagen4;
+        margin: 0.3rem;
+    }
+
+
+
+    .mainS{
+
+        font-size: 1.5rem;
+        padding: 3vh;
+        margin: auto;
+            
+    }
+}
+
+//versión escritorio
+
+@media only screen and (min-width:1024px){
+
+    .mainServicio{
+        height: 80vh;
+        display: grid;
+        grid-template-areas: "mainS mainS mainS mainS"
+                             "imagen1 imagen2 imagen3 imagen4";                   
+        justify-content: center;
+        margin: auto;
+    }
+}
